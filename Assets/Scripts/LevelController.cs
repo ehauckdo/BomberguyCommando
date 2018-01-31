@@ -6,7 +6,6 @@ using UnityEngine;
 public class LevelController : MonoBehaviour {
 
 	public Text scoreText;
-	public int maxActiveBombs;
 
 	PlayerController playerController;
 	GameObject[] bunnyIcons;
@@ -49,10 +48,7 @@ public class LevelController : MonoBehaviour {
 	}
 
 	public void PlaceBomb(Vector3 position){
-		if (!gameActive)
-			return;
-
-		if (bombsLeft == 0 || currentActiveBombs >= maxActiveBombs)
+		if (!gameActive || bombsLeft == 0)
 			return;
 
 		if (position.y > 3.5f || position.y < -2.5)
@@ -78,10 +74,6 @@ public class LevelController : MonoBehaviour {
 
 	public void UpdateScore(int i){
 		score = score + i;
-		UpdateScoreText ();
-	}
-
-	void UpdateScoreText(){
 		scoreText.text = "Score: " + score.ToString();
 	}
 
