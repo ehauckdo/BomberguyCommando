@@ -32,7 +32,7 @@ public class DisplayController : MonoBehaviour {
 			}
 		}
 
-		// minimum resolution
+		// no good resolution found, set minimum resolution
 		Screen.SetResolution(320, 180, false);
 		
 	}

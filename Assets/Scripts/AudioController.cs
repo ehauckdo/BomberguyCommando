@@ -7,7 +7,6 @@ public class AudioController : MonoBehaviour {
 	AudioClip boom, kill, bonus, damage, toss;
 	AudioSource audioSource;
 
-	// Use this for initialization
 	void Start () {
 		boom = (AudioClip)Resources.Load ("SFX/damage1");
 		kill = (AudioClip)Resources.Load ("SFX/kill1");

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Helper {
 
-	public static SceneController LoadGameController(){
+	public static SceneController LoadSceneController(){
 		SceneController gameController = null;
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("SceneController");
 		if (gameControllerObject != null) {

@@ -7,7 +7,7 @@ public class InputController : MonoBehaviour {
 	private SceneController sceneController;
 
 	void Start () {
-		sceneController = Helper.LoadGameController();
+		sceneController = Helper.LoadSceneController();
 	}
 
 	void Update () {
@@ -32,5 +32,4 @@ public class InputController : MonoBehaviour {
 		Vector3 newPosition = new Vector3 (xPosition, yPosition, 0f);
 		return newPosition;
 	}
-		
 }
